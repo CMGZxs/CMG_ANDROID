@@ -55,9 +55,7 @@ public class PersonInfoManager {
                 ANDROID_ID = SPUtils.getInstance().getString(Constants.PUSH_TOKEN, "");
             }
             SPUtils.getInstance().put("cmg_sdk_android_id",ANDROID_ID);
-            Log.e("cmg_sdk_android","获取AndroidID="+ANDROID_ID);
         }else{
-            Log.e("cmg_sdk_android","获取AndroidID_sp");
         }
 
 
