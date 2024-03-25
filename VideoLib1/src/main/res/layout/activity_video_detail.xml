@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/video_black"
+    android:keepScreenOn="true"
+    android:orientation="vertical"
+    tools:context="ui.activity.VideoDetailActivity">
+
+    <widget.LoadingView
+        android:id="@+id/video_loading_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+    </widget.LoadingView>
+
+    <smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <smartrefresh.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/video_detail_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+
+        <!--        <com.scwang.smart.refresh.footer.ClassicsFooter-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content" />-->
+    </smartrefresh.layout.SmartRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/back_rl"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:paddingTop="@dimen/video_dp10"
+            android:paddingBottom="@dimen/video_dp10"
+            android:src="@drawable/superplayer_btn_back_play">
+
+        </ImageView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="165dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/activity_rule_abbreviation"
+                android:layout_width="30dp"
+                android:layout_height="35dp"
+                android:visibility="gone"></ImageView>
+
+            <ImageView
+                android:id="@+id/activity_rule_img"
+                android:layout_width="100dp"
+                android:layout_height="@dimen/video_dp50"
+                android:visibility="gone"></ImageView>
+
+            <ImageView
+                android:id="@+id/activity_to_abbreviation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:padding="@dimen/video_dp20"
+                android:visibility="gone"></ImageView>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <widget.YALikeAnimationView
+        android:id="@+id/love_icon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></widget.YALikeAnimationView>
+</RelativeLayout>

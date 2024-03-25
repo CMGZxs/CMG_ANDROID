@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:background="@drawable/anthology_bg"
+    android:layout_marginLeft="40dp"
+    android:layout_marginRight="40dp"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="提示"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/superplayer_black"
+        android:padding="10dp">
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/superplayer_black"
+        android:text="您还未登录，请立即登录"></TextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/video_c9">
+
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/no_login_tips_cancel"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="取消"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textColor="@color/video_c9"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            >
+
+        </TextView>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/video_c9"></View>
+
+        <TextView
+            android:id="@+id/no_login_tips_ok"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="登录"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textSize="16sp"
+            android:textColor="#1C337A"
+            android:layout_alignParentRight="true">
+
+        </TextView>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="app_name">数智融媒sdk</string>
+
+    <string name="btn_cancel">取消</string>
+    <string name="btn_ok">确定</string>
+    <string name="comment_list_empty" translatable="false">暂无任何评论，快来抢沙发吧！</string>
+    <string name="vod_ffplay">ffplay</string>
+    <string name="vod_exo">exo</string>
+    <string name="data_err" translatable="false">系统数据错误，请重试</string>
+    <string name="net_err" translatable="false">请求失败,请检查网络</string>
+    <string name="no_wifi" translatable="false">当前为非WI-FI,继续播放将消耗流量</string>
+    <string name="no_more_video" translatable="false">没有更多视频了</string>
+
+    <string name="title_activity_rtmp_room_demo">RtmpRoomDemoActivity</string>
+
+    <string name="str_room_id_tips">输入房间号</string>
+    <string name="str_user_id_tips">输入用户名</string>
+
+    <string name="main_privacy_text">点击查看<a href="http://privacy.qq.com/">隐私政策</a></string>
+    <string name="working">正在运行中</string>
+
+    <string name="item_video_conferencing">多人视频会议</string>
+    <string name="item_chat_room">语音聊天室</string>
+    <string name="item_video_interactive_live_streaming">视频互动直播</string>
+    <string name="item_voice_call">语音通话</string>
+    <string name="item_video_call">视频通话</string>
+    <string name="item_chat_salon">语音沙龙</string>
+
+    <string name="app_toast_login_success">登录成功</string>
+    <string name="app_toast_login_fail" formatted="false">登录IM失败，所有功能不可用[%d]%s</string>
+
+    <string name="app_tv_video_cloud_tools_version" formatted="false">视频云工具包 v%s</string>
+    <string name="app_title_share_log">分享日志</string>
+    <string name="app_dialog_log_out">确定要退出登录吗？</string>
+    <string name="app_dialog_exit_app">确定要退出APP吗？</string>
+
+    <string name="app_item_live_pusher">推流演示（摄像头推流）</string>
+    <string name="app_item_live_player">标准直播播放</string>
+    <string name="app_item_leb_player">快直播播放</string>
+    <string name="app_item_link_mic_new">连麦演示（新方案）</string>
+    <string name="app_item_link_mic_old">连麦演示（旧方案）</string>
+    <string name="app_item_link_mic">连麦演示</string>
+    <string name="app_item_xiao_zhi_bo">小直播</string>
+    <string name="app_item_mlvb">移动直播 MLVB</string>
+
+    <string name="app_item_super_player">超级播放器</string>
+    <string name="app_item_player">播放器 Player</string>
+
+    <string name="app_item_video_recording">视频录制</string>
+    <string name="app_item_effects_editor">特效编辑</string>
+    <string name="app_item_video_stitching">视频拼接</string>
+    <string name="app_item_picture_transition">图片转场</string>
+    <string name="app_item_video_upload">视频上传</string>
+    <string name="app_item_xiao_shi_pin">小视频</string>
+    <string name="app_item_ugsv">短视频 UGSV</string>
+
+    <string name="app_item_trtc">实时音视频 TRTC</string>
+    <string name="app_title_trtc">腾讯云TRTC实时互动</string>
+
+    <string name="app_tv_smart_version" formatted="false">Smart版本 v%s</string>
+    <string name="app_tv_main_title">腾讯视频云</string>
+    <string name="app_tv_main_version">version = 1.0</string>
+    <string name="app_tv_main_bottom_hint">本APP用于展示腾讯视频云终端产品的各类功能</string>
+
+    <string name="app_tv_super_player_version" formatted="false">超级播放器版本 v%s</string>
+
+    <string name="app_tv_trtc_version" formatted="false">腾讯云 TRTC v%s</string>
+    <string name="app_tv_video_conferencing_tips">语音自动降噪、视频画质超高清，适用于在线会议、远程培训、小班课等场景。</string>
+    <string name="app_tv_chat_room_tips">内含变声、音效、混响、背景音乐等声音玩法，适用于闲聊房、K歌房、开黑房等语聊场景。</string>
+    <string name="app_tv_video_interactive_live_streaming_tips">低延时、十万人高并发的大型互动直播解决方案，观众时延低至800ms，上下麦切换免等待。</string>
+    <string name="app_tv_voice_call_tips">48kHz高音质，60%丢包可正常语音通话，领先行业的3A处理，杜绝回声和啸叫。</string>
+    <string name="app_tv_video_call_tips">支持720P/1080P高清画质，50%丢包率可正常视频通话，自带美颜、挂件、抠图等AI特效。</string>
+
+    <string name="app_tv_ugc_version" formatted="false">腾讯云 UGC v%s</string>
+
+
+    <string name="superplayer_hardware_Acceleration" translatable="false">硬件加速</string>
+    <string name="superplayer_mirror" translatable="false">镜像</string>
+    <string name="superplayer_multi_speed_playback" translatable="false">多倍速播放</string>
+    <string name="superplayer_brightness" translatable="false">亮度</string>
+    <string name="superplayer_sound" translatable="false">声音</string>
+    <string name="superplayer_sharpness" translatable="false">清晰度</string>
+    <string name="superplayer_back_live" translatable="false">返回直播</string>
+    <string name="superplayer_small_video_special_effects_editing" translatable="false">小视频-特效剪辑</string>
+    <string name="superplayer_original_picture" translatable="false">原画</string>
+    <string name="superplayer_speed" translatable="false">倍速</string>
+    <string name="superplayer_test_video" translatable="false">测试视频</string>
+    <string name="superplayer_screenshot_fail" translatable="false">截图失败</string>
+    <string name="superplayer_float_play_fail" translatable="false">悬浮播放失败</string>
+    <string name="superplayer_enter_setting_fail" translatable="false">进入设置页面失败,请手动开启悬浮窗权限</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+
+    <string name="cmg_brvah_app_name" tools:ignore="ExtraTranslation">Library</string>
+    <string name="cmg_brvah_load_end" tools:ignore="ExtraTranslation">没有更多数据</string>
+    <string name="cmg_brvah_load_failed" tools:ignore="ExtraTranslation">加载失败，请点我重试</string>
+    <string name="cmg_brvah_loading" tools:ignore="ExtraTranslation">正在加载中...</string>
+
+    <string name="srl_footer_failed">加载失败</string>
+    <string name="srl_footer_finish">加载完成</string>
+    <string name="srl_footer_loading">正在加载…</string>
+    <string name="srl_footer_nothing">没有更多数据了</string>
+    <string name="srl_footer_pulling">上拉加载更多</string>
+    <string name="srl_footer_refreshing">等待头部刷新完成…</string>
+    <string name="srl_footer_release">释放立即加载</string>
+
+    <string name="srl_header_failed">刷新失败</string>
+    <string name="srl_header_finish">刷新完成</string>
+    <string name="srl_header_loading">等待底部加载完成…</string>
+    <string name="srl_header_pulling">下拉可以刷新</string>
+    <string name="srl_header_refreshing">正在刷新…</string>
+    <string name="srl_header_release">释放立即刷新</string>
+    <string name="srl_header_secondary">释放进入二楼</string>
+    <string name="srl_header_update">上次更新 M-d HH:mm</string>
+    <string formatted="false" name="srl_component_falsify">%s 虚假区域\n代表运行时拖动的高度【%.1fdp】 \n而不会显示任何东西</string>
+    <string name="srl_content_empty">SmartRefreshLayout中没有找到内容视图。您是否忘记在xml布局文件中添加？</string>
+</resources>

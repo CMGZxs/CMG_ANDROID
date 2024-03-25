@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/video_c9"
+        android:padding="50dp"
+        android:text="视频详情页面"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/set_code"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="2dp"
+        android:background="@color/video_c9"
+        android:gravity="center"
+        android:text="获取参数值"></TextView>
+
+    <EditText
+        android:id="@+id/panelid"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:hint="panelid"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:visibility="gone">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/contentid"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:hint="contentid"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:visibility="gone">
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/fxsys"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/video_c9"
+        android:gravity="center"
+        android:text="分享四要素"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:visibility="gone">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/class_list"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/video_c9"
+        android:gravity="center"
+        android:text="合集列表"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:visibility="gone">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/others_home_page"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="2dp"
+        android:layout_toRightOf="@+id/set_code"
+        android:background="@color/video_c9"
+        android:gravity="center"
+        android:text="SDK首页（Activity）"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/others_home_page_fragment"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/set_code"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="2dp"
+        android:background="@color/video_c9"
+        android:gravity="center"
+        android:text="SDK首页（Fragment）"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/to_page_detail"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/set_code"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_toRightOf="@+id/others_home_page_fragment"
+        android:background="@color/video_c9"
+        android:gravity="center"
+        android:text="跳转新闻详情页"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/load_more_data"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/others_home_page_fragment"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="2dp"
+        android:background="@color/video_c9"
+        android:gravity="center"
+        android:text="加载列表更多信息"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/clear_user_info"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/others_home_page_fragment"
+        android:layout_toRightOf="@+id/load_more_data"
+        android:background="@color/video_c9"
+        android:gravity="center"
+        android:text="清除用户信息"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"></TextView>
+
+    <TextView
+        android:id="@+id/change_user_info"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/load_more_data"
+        android:layout_marginRight="5dp"
+        android:background="@color/video_c9"
+        android:gravity="center"
+        android:text="登录页面切换用户"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"></TextView>
+
+    <TextView
+        android:id="@+id/clear_fragment"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/load_more_data"
+        android:layout_toRightOf="@+id/change_user_info"
+        android:background="@color/video_c9"
+        android:gravity="center"
+        android:text="清空fragment"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"></TextView>
+
+    <TextView
+        android:id="@+id/get_list_data"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/change_user_info"
+        android:layout_marginTop="@dimen/video_dp5"
+        android:layout_marginRight="5dp"
+        android:background="@color/video_c9"
+        android:gravity="center"
+        android:text="获取推荐列表"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"></TextView>
+
+    <Switch
+        android:id="@+id/isRealease"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/change_user_info"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/get_list_data"
+        android:text="切换正式环境"></Switch>
+
+
+    <TextView
+        android:id="@+id/uuid"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/video_c9"
+        android:enabled="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:longClickable="true"
+        android:text=""
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:textIsSelectable="true"
+        android:visibility="gone"></TextView>
+
+    <TextView
+        android:id="@+id/test"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/isRealease"
+        android:layout_marginTop="10dp"
+        android:background="@color/video_c9"
+        android:gravity="center"
+        android:text="测试页面">
+
+    </TextView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/test">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/addFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/change_user_info"
+        android:layout_marginTop="5dp">
+
+
+    </RelativeLayout>
+</RelativeLayout>

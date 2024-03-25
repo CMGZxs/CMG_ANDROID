@@ -1,0 +1,68 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+
+    compileSdkVersion 30
+    buildToolsVersion '30.0.3'
+
+    defaultConfig {
+        //各个项目在这里修改包名
+        applicationId "com.pingan.smt.template"
+//        applicationId "com.pingan.smt.changsha" com.pingan.smt.template
+        minSdkVersion 21
+        targetSdkVersion = 30
+        versionCode  1
+        versionName "1.0"
+        vectorDrawables.useSupportLibrary =true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+//    packagingOptions {
+//        exclude 'META-INF/DEPENDENCIES'
+//        exclude 'META-INF/LICENSE'
+//        exclude 'META-INF/NOTICE'
+//        exclude 'META-INF/DEPENDENCIES'
+//        exclude 'META-INF/androidx.legacy_legacy-support-core-utils.version'
+//        exclude  'META-INF/androidx.vectordrawable_vectordrawable.version'
+//        exclude  'META-INF/androidx.loader_loader.version'
+//        exclude 'META-INF/androidx.localbroadcastmanager_localbroadcastmanager.version'
+//        exclude 'META-INF/androidx.appcompat_appcompat.version'
+//        exclude'META-INF/androidx.viewpager_viewpager.version'
+//        exclude 'META-INF/androidx.swiperefreshlayout_swiperefreshlayout.version'
+//        exclude 'META-INF/androidx.asynclayoutinflater_asynclayoutinflater.version'
+//        exclude 'META-INF/androidx.cursoradapter_cursoradapter.version'
+//        exclude 'META-INF/androidx.recyclerview_recyclerview.version'
+//        exclude'META-INF/androidx.drawerlayout_drawerlayout.version'
+//        exclude 'META-INF/androidx.print_print.version'
+//        exclude 'META-INF/androidx.vectordrawable_vectordrawable-animated.version'
+//        exclude  'META-INF/androidx.slidingpanelayout_slidingpanelayout.version'
+//        exclude 'META-INF/androidx.interpolator_interpolator.version'
+//        exclude 'META-INF/androidx.fragment_fragment.version'
+//        exclude  'META-INF/androidx.coordinatorlayout_coordinatorlayout.version'
+//        exclude 'META-INF/androidx.customview_customview.version'
+//        exclude 'META-INF/androidx.legacy_legacy-support-core-ui.version'
+//    }
+}
+
+dependencies {
+
+    implementation project(path: ':VideoLib1')
+    testImplementation 'junit:junit:4.13.2'
+    implementation "com.android.support:appcompat-v7:28.0.0"
+    implementation "com.android.support:recyclerview-v7:28.0.0"
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}

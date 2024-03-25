@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/live_rv_item_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/live_item_img"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitXY">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/item_live_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="160dp"
+            android:src="@drawable/szrm_sdk_live_preview"
+            ></ImageView>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/live_item_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/video_dp10"
+        android:background="@color/video_black"
+        android:padding="@dimen/video_dp10"
+        android:textColor="@color/video_white"
+        android:textSize="17sp"
+        tool:text="直播间：互动聊天留言">
+
+    </TextView>
+
+</LinearLayout>

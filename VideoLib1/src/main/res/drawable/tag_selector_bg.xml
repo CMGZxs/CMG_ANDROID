@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/video_white" android:drawable="@drawable/tagflow_select_bg" android:state_checked="true"></item>
+    <item android:color="@color/video_black" android:drawable="@drawable/tagflow_unselect_bg"></item>
+</selector>

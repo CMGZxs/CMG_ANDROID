@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/comment_list_empty_rl">
+
+    <ImageView
+        android:id="@+id/comment_list_empty_img"
+        android:layout_width="wrap_content"
+        android:src="@drawable/szrm_sdk_comment_list_empty_img"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/comment_list_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/comment_list_empty_img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/video_dp10"
+        android:textColor="@color/c9"
+        android:text="@string/comment_list_empty">
+
+    </TextView>
+</RelativeLayout>

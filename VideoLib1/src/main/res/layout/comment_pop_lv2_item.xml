@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="60dp"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:id="@+id/lv2_reback_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lv2_reback_name_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/video_black"
+                android:textSize="13sp"
+                tools:text="小编回复：测试测试测试测试测试测试测试测试测试测试测试测试">
+
+            </TextView>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/lv2_reback_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/video_c9"
+                android:textSize="10sp"
+                tools:text="2021-12-31"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/lv2_reback_date"
+                android:text="回复"
+                android:textColor="@color/video_c9"
+                android:textSize="10sp"></TextView>
+
+            <LinearLayout
+                android:id="@+id/lv2_comment_like_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:padding="@dimen/video_dp5">
+
+                <ImageView
+                    android:id="@+id/lv2_comment_like_icon"
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:layout_marginRight="@dimen/video_dp10"
+                    android:layout_toLeftOf="@+id/comment_like_num"
+                    android:src="@drawable/szrm_sdk_comment_unlike">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/lv2_comment_like_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/video_dp5"
+                    android:text=""
+                    android:textColor="@color/video_c9"
+                    android:textSize="12sp"></TextView>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lv2_extend_cos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/lv2_load_more_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:textColor="@color/video_black"
+            android:textSize="13sp"
+            tools:text="李* 等人共10条回复"></TextView>
+
+        <TextView
+            android:id="@+id/lv2_load_more_extend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="展开"
+            android:textColor="@color/bz_red"
+            android:textSize="13sp"></TextView>
+    </LinearLayout>
+
+</LinearLayout>

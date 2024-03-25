@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_tag"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:layout_marginRight="@dimen/video_dp10"
+    android:layout_marginBottom="@dimen/video_dp10"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp"
+    android:paddingLeft="@dimen/video_dp10"
+    android:paddingRight="@dimen/video_dp10"
+    android:background="@drawable/tag_selector_bg"
+    android:text=""
+    android:textColor="@drawable/tagflow_text_color"
+    android:textSize="15sp">
+
+</TextView>

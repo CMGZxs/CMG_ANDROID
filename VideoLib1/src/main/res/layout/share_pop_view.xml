@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:gravity="center_vertical"
+    android:background="#26262B"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/video_dp20">
+
+        <ImageView
+            android:id="@+id/share_wx_btn"
+            android:layout_width="@dimen/video_dp50"
+            android:layout_height="@dimen/video_dp50"
+            android:layout_weight="1"
+            android:src="@drawable/szrm_sdk_share_wechat_icon"></ImageView>
+
+        <ImageView
+            android:id="@+id/share_circle_btn"
+            android:layout_width="@dimen/video_dp50"
+            android:layout_height="@dimen/video_dp50"
+            android:layout_weight="1"
+            android:src="@drawable/szrm_sdk_share_circle_icon"></ImageView>
+
+        <ImageView
+            android:id="@+id/share_qq_btn"
+            android:layout_width="@dimen/video_dp50"
+            android:layout_height="@dimen/video_dp50"
+            android:layout_weight="1"
+            android:src="@drawable/szrm_sdk_share_qq_icon"></ImageView>
+    </LinearLayout>
+
+</LinearLayout>

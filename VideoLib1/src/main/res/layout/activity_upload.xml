@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/video_white"
+        android:orientation="vertical"
+        tools:context="ui.activity.UploadActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+
+            <TextView
+                android:id="@+id/upload_cancel_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/video_dp25"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="#3E3A39">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="发布作品"
+                android:textColor="#3E3A39"
+                android:textSize="17sp">
+
+            </TextView>
+
+            <ImageView
+                android:id="@+id/release_img"
+                android:layout_width="@dimen/video_dp50"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/video_dp15"
+                android:src="@drawable/release_bg">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/video_dp15"
+                    android:visibility="gone"
+                    android:layout_marginRight="@dimen/video_dp15">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="话题选择"
+                        android:textColor="#3E3A39"
+                        android:textSize="18sp"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/video_dp15"
+                        android:text="必选，作品必须符合话题其中之一"
+                        android:textColor="@color/video_c9"
+                        android:textSize="13sp"></TextView>
+                </LinearLayout>
+
+                <com.zhy.view.flowlayout.TagFlowLayout
+                    android:id="@+id/uploadTagFlow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/video_dp20"
+                    app:max_select="1"
+                    android:visibility="gone">
+
+                </com.zhy.view.flowlayout.TagFlowLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/video_dp15"
+                    android:layout_marginTop="@dimen/video_dp30"
+                    android:text="视频简介"
+                    android:textColor="@color/video_black"
+                    android:textSize="18sp">
+
+                </TextView>
+
+                <EditText
+                    android:id="@+id/brief_introduction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/video_dp15"
+                    android:background="@drawable/brief_introduction_bg"
+                    android:gravity="top"
+                    android:hint="填写视频介绍，让更多人了解你的作品，最多120个字符"
+                    android:maxLength="120"
+                    android:minHeight="150dp"
+                    android:padding="@dimen/video_dp5"
+                    android:textColor="@color/video_black"
+                    android:textColorHint="@color/video_c9"
+                    android:textSize="15sp">
+
+                </EditText>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="视频上传"
+                        android:textColor="#3E3A39"
+                        android:textSize="18sp"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/video_dp15"
+                        android:text="视频时长建议不超过180秒"
+                        android:textColor="@color/video_c9"
+                        android:textSize="13sp"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/video_dp15"
+                    android:layout_marginTop="@dimen/video_dp15"
+                    android:layout_marginBottom="@dimen/video_dp50"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/upload_btn"
+                            android:layout_width="95dp"
+                            android:layout_height="95dp"
+                            android:paddingTop="@dimen/video_dp10"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/szrm_sdk_upload_btn">
+
+                        </ImageView>
+
+                        <ImageView
+                            android:id="@+id/upload_video_cancel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/szrm_sdk_upload_video_cancel">
+                        </ImageView>
+                    </RelativeLayout>
+
+                    <ProgressBar
+                        android:id="@+id/upload_progress"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:layout_width="95dp"
+                        android:layout_height="4dp"
+                        android:layout_marginTop="@dimen/video_dp10"
+                        android:max="100"
+                        android:progressDrawable="@drawable/upload_progress_bg"
+                        android:visibility="gone">
+
+                    </ProgressBar>
+
+                    <TextView
+                        android:id="@+id/upload_complete_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="上传完成"
+                        android:textColor="@color/video_c9"
+                        android:textSize="11sp"
+                        android:visibility="gone"></TextView>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

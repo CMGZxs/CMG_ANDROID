@@ -1,0 +1,99 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+<!--    <style name="AppBaseTheme" parent="android:Theme.Black.NoTitleBar">-->
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+<!--    </style>-->
+
+    <style name="matching_dialog" parent="@android:style/Theme.Holo.Dialog">
+
+        <!-- 是否有边框 -->
+        <item name="android:windowFrame">@null</item>    <!--是否在悬浮Activity之上  -->
+        <item name="android:windowIsFloating">true</item>    <!--标题  -->
+        <item name="android:windowNoTitle">true</item>    <!--阴影  -->
+        <item name="android:windowIsTranslucent">true</item>    <!--透明背景-->
+        <item name="android:background">@android:color/transparent</item>    <!--窗口背景透明-->
+        <item name="android:windowBackground">@android:color/transparent</item>    <!--弹窗背景是否变暗-->
+        <item name="android:backgroundDimEnabled">false</item>
+
+
+    </style>
+
+    <!-- Application theme. -->
+<!--    <style name="AppTheme" parent="AppBaseTheme">-->
+        <!--<item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorAccent">@color/colorAccent</item>-->
+        <!--<item name="android:windowBackground">@color/colorActivityBackground</item>-->
+<!--    </style>-->
+
+    <!--meeting room -->
+    <style name="MeetingActivityTheme" parent="Theme.AppCompat.NoActionBar"/>
+    <style name="MeetingDialogTheme" parent="Theme.AppCompat.DayNight.Dialog.Alert"/>
+    <style name="MeetingFragmentDialogTheme" parent="@android:style/Theme.Holo.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowBackground">@color/hlfTransparent</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="common_alert_dialog" parent="@android:style/Theme.Holo.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="Theme.VideoPlayerDemo" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:navigationBarDividerColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="take_popwindow_anim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/anim_popshow</item>
+        <item name="android:windowExitAnimation">@anim/anim_pophidden</item>
+    </style>
+
+    <style name="AnimCenter" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/pop_center_in</item>
+        <item name="android:windowExitAnimation">@anim/pop_center_out</item>
+    </style>
+
+
+
+    <!---->
+    <style name="SuperPlayerAppProgressBarStyle">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/superplayer_layer_list_progress_bar</item>
+    </style>
+
+    <declare-styleable name="SuperPlayerTCPointSeekBar">
+        <attr name="psb_thumbBackground" format="reference" />
+        <attr name="psb_backgroundColor" format="color" />
+        <attr name="psb_progressColor" format="color" />
+        <attr name="psb_progress" format="integer" />
+        <attr name="psb_max" format="integer" />
+        <attr name="psb_progressHeight" format="dimension" />
+    </declare-styleable>
+
+
+    <style name="take_speed_popwindow_anim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/anim_speed_popshow</item>
+        <item name="android:windowExitAnimation">@anim/anim_speed_pophide</item>
+    </style>
+
+    <style name="video_sdk_web_toolBar">
+        <item name="colorControlNormal">#ffffff</item>
+        <item name="android:homeAsUpIndicator">@drawable/szrm_sdk_icon_close_dialog</item>
+        <item name="android:titleTextStyle">@style/video_sdk_web_titlestyle</item>
+    </style>
+
+    <style name="video_sdk_web_titlestyle">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+</resources>

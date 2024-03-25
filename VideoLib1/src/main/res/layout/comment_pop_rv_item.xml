@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/comment_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/comment_user_head"
+            android:layout_width="45dp"
+            android:layout_height="45dp">
+
+        </ImageView>
+
+        <LinearLayout
+            android:id="@+id/comment_head_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/comment_user_head"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lv1_comment_lin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/comment_pop_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/comment_pop_user_nam"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        tools:text="不负韶华">
+
+                    </TextView>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/video_dp5"
+                        android:layout_marginTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/comment_top_label"
+                            android:layout_width="25dp"
+                            android:layout_height="15dp"
+                            android:src="@drawable/comment_top"
+                            android:visibility="gone"></ImageView>
+
+
+                        <!--                    <TextView-->
+                        <!--                        android:id="@+id/under_review"-->
+                        <!--                        android:layout_width="wrap_content"-->
+                        <!--                        android:layout_height="wrap_content"-->
+                        <!--                        android:textColor="#3E85ED"-->
+                        <!--                        android:textSize="12sp"-->
+                        <!--                        android:visibility="gone"-->
+                        <!--                        android:text="(审核中)">-->
+
+                        <!--                    </TextView>-->
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/comment_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/video_c9"
+                        android:textSize="10sp"
+                        tools:text="18分钟前">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/comment_date"
+                        android:text="回复"
+                        android:textColor="@color/colorGray4"
+                        android:textSize="10sp">
+
+                    </TextView>
+
+                    <LinearLayout
+                        android:id="@+id/comment_like_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/video_dp5">
+
+                        <ImageView
+                            android:id="@+id/comment_like_icon"
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:layout_marginRight="@dimen/video_dp10"
+                            android:layout_toLeftOf="@+id/comment_like_num"
+                            android:src="@drawable/szrm_sdk_comment_unlike">
+
+                        </ImageView>
+
+                        <TextView
+                            android:id="@+id/comment_like_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/video_dp5"
+                            android:text=""
+                            android:textColor="@color/video_c9"
+                            android:textSize="12sp"></TextView>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/comment_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/comment_head_ll"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/video_black"
+                    android:textSize="13sp"
+                    tools:text="测试评论">
+
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/gm_reback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/video_dp10"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="编辑回复："
+                    android:textColor="@color/comment_pop_user_nam"
+                    android:textSize="12sp"></TextView>
+
+                <TextView
+                    android:id="@+id/gm_reback_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/video_c9"
+                    android:textSize="9sp"
+                    tools:text="1小时前"></TextView>
+
+                <TextView
+                    android:id="@+id/gm_reback_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/video_black"
+                    android:textSize="13sp"
+                    tools:text="官方回复官方回复">
+
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reback1_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/reback1_name_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/video_black"
+                        android:textSize="13sp"
+                        tools:text="小编回复：测试测试测试测试测试测试测试测试测试测试测试测试">
+
+                    </TextView>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/reback1_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/video_c9"
+                        android:textSize="10sp"
+                        tools:text="2021-12-31"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/reback1_date"
+                        android:text="回复"
+                        android:textColor="@color/colorGray4"
+                        android:textSize="10sp"></TextView>
+
+                    <LinearLayout
+                        android:id="@+id/reback1_like_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/video_dp5">
+
+                        <ImageView
+                            android:id="@+id/reback1_like_icon"
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:layout_marginRight="@dimen/video_dp10"
+                            android:layout_toLeftOf="@+id/comment_like_num"
+                            android:src="@drawable/szrm_sdk_comment_unlike">
+
+                        </ImageView>
+
+                        <TextView
+                            android:id="@+id/reback1_like_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/video_dp5"
+                            android:text=""
+                            android:textColor="@color/video_c9"
+                            android:textSize="12sp"></TextView>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/reback2_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/reback2_name_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/video_black"
+                        android:textSize="13sp"
+                        tools:text="小编回复：测试测试测试测试测试测试测试测试测试">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/reback2_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/video_c9"
+                        android:textSize="10sp"
+                        tools:text="2021-12-31"></TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toRightOf="@+id/reback2_date"
+                        android:text="回复"
+                        android:textColor="@color/colorGray4"
+                        android:textSize="10sp"></TextView>
+
+                    <LinearLayout
+                        android:id="@+id/reback2_like_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/video_dp5">
+
+                        <ImageView
+                            android:id="@+id/reback2_like_icon"
+                            android:layout_width="13dp"
+                            android:layout_height="13dp"
+                            android:layout_marginRight="@dimen/video_dp10"
+                            android:layout_toLeftOf="@+id/comment_like_num"
+                            android:src="@drawable/szrm_sdk_comment_unlike">
+
+                        </ImageView>
+
+                        <TextView
+                            android:id="@+id/reback2_like_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/video_dp5"
+                            android:text=""
+                            android:textColor="@color/video_c9"
+                            android:textSize="12sp"></TextView>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lv1_extend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/load_more_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/video_black"
+                    android:textSize="13sp"
+                    tools:text="李* 等人共10条回复"></TextView>
+
+                <TextView
+                    android:id="@+id/lv1_load_more_extend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:text="展开"
+                    android:textColor="@color/bz_red"
+                    android:textSize="13sp"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

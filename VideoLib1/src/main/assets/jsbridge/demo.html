@@ -1,0 +1,233 @@
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>
+        js调用java
+    </title>
+</head>
+
+<body>
+
+<p>
+    <xmp id="show">
+    </xmp>
+</p>
+
+<p>
+    <xmp id="init"></xmp>
+</p>
+
+<p>
+    <input type="text" id="text1" value="用户名(username)"/>
+</p>
+
+<p>
+    <input type="text" id="text2" value="password"/>
+</p>
+
+<p>
+    <input type="button" id="enter" value="设置标题" onclick="testClick();"/>
+</p>
+
+<p>
+    <input type="button" id="enter1" value="返回" onclick="testClick1();"/>
+</p>
+
+<p>
+    <input type="button" id="enter2" value="获取设备id" onclick="testClick2();"/>
+</p>
+
+<p>
+    <input type="button" id="enter3" value="获取用户信息" onclick="testClick3();"/>
+</p>
+
+<p>
+    <input type="button" id="enter4" value="打开新的webview" onclick="testClick4();"/>
+</p>
+
+<p>
+    <input type="button" id="enter5" value="分享" onclick="testClick5();"/>
+</p>
+
+<p>
+    <input type="button" id="enter6" value="保存图片" onclick="testClick6();"/>
+</p>
+
+<p>
+    <input type="button" id="enter7" value="打开视频" onclick="testClick7();"/>
+</p>
+
+<p>
+    <input type="button" id="enter8" value="打开登录页" onclick="testClick8();"/>
+</p>
+
+<!--getAppVersion platform versionName-->
+<p>
+    <input type="button" id="enter9" value="获取手机app信息" onclick="testClick9();"/>
+</p>
+
+</body>
+<script>
+
+        function testDiv() {
+            document.getElementById("show").innerHTML = document.getElementsByTagName("html")[0].innerHTML;
+        }
+
+        function testClick() {
+            //send message to native
+            var data = '页面标题';
+            window.WebViewJavascriptBridge.callHandler(
+                'setTitle'
+                ,data
+                , function(responseData) {
+                    document.getElementById("show").innerHTML = "页面标题:" + responseData
+                }
+            );
+
+        }
+
+        function testClick1() {
+            window.WebViewJavascriptBridge.callHandler(
+                'monitorLifeCycle'
+            );
+        }
+
+         function testClick2() {
+            window.WebViewJavascriptBridge.callHandler(
+                'getDeviceId'
+                ,''
+                , function(responseData) {
+                    document.getElementById("show").innerHTML = "获取的设备id:" + responseData
+                }
+            );
+        }
+
+
+         function testClick3() {
+            window.WebViewJavascriptBridge.callHandler(
+                'getUserInfo'
+                ,''
+                , function(responseData) {
+                    document.getElementById("show").innerHTML = "获取的用户信息为：" + responseData
+                }
+            );
+        }
+
+
+         function testClick4() {
+         var data = {'pageName': 'NewsDetail', 'newsLink':'https://www.baidu.com/', 'title':'新页面标题',
+                'content' : '简介', 'imgUrl' : 'tupiandizhi.png','link' : 'https://www.baidu.com/', 'version':'0'}
+            window.WebViewJavascriptBridge.callHandler(
+                'jumpToNativePage'
+                , data
+                , function(responseData) {
+                    document.getElementById("show").innerHTML = "send get responseData from java, data = " + str1 + str2
+                }
+            );
+        }
+
+
+         function testClick5() {
+            window.WebViewJavascriptBridge.callHandler(
+                'share'
+                , {platform:'2',shareUrl:'https://www.csbtv.com',shareTitle:"Tttitle",shareImage:'xxx.png',shareBrief:'briefffff'}
+                , function(responseData) {
+                    document.getElementById("show").innerHTML = "分享成功"
+                }
+            );
+        }
+
+         function testClick6() {
+            window.WebViewJavascriptBridge.callHandler(
+                'savePhoto'
+                , {url:'https://img1.baidu.com/it/u=3879630843,420155804&fm=253&fmt=auto&app=138&f=JPEG?w=550&h=370'}
+                , function(responseData) {
+                    if(responseData == '1') {
+                        alert('保存成功')
+                    } else {
+                      alert('保存失败')
+                    }
+                }
+            );
+        }
+
+        function testClick7() {
+            window.WebViewJavascriptBridge.callHandler(
+                'openVideo'
+                , {contentId:'23102677'}
+                , function(responseData) {
+                    document.getElementById("show").innerHTML = "打开视频"
+                }
+            );
+        }
+
+         function testClick8() {
+            window.WebViewJavascriptBridge.callHandler(
+                'goLogin'
+                , {}
+                , function(responseData) {
+                    document.getElementById("show").innerHTML = "打开登录页"
+                }
+            );
+        }
+
+        function testClick9() {
+            window.WebViewJavascriptBridge.callHandler(
+                'getAppVersion'
+                , {}
+                , function(responseData) {
+                    document.getElementById("show").innerHTML = "获取的手机信息" + responseData
+                }
+            );
+        }
+
+
+        function bridgeLog(logContent) {
+            document.getElementById("show").innerHTML = logContent;
+        }
+
+        function connectWebViewJavascriptBridge(callback) {
+            if (window.WebViewJavascriptBridge) {
+                callback(WebViewJavascriptBridge)
+            } else {
+                document.addEventListener(
+                    'WebViewJavascriptBridgeReady'
+                    , function() {
+                        callback(WebViewJavascriptBridge)
+                    },
+                    false
+                );
+            }
+        }
+
+        connectWebViewJavascriptBridge(function(bridge) {
+            bridge.init(function(message, responseCallback) {
+                console.log('Js got a message', message);
+                var data = {
+                    'Javascript Responds': '测试中文!'
+                };
+                console.log('Js responding with', data);
+                responseCallback(data);
+            });
+
+            bridge.registerHandler("functionInJs", function(data, responseCallback) {
+                document.getElementById("show").innerHTML = ("data from Java: = " + data);
+                var responseData = "Javascript Says Right back aka!";
+                responseCallback(responseData);
+            });
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

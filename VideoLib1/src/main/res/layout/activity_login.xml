@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/p10_opacity_black"
+    android:orientation="vertical"
+    tools:context="ui.activity.LoginActivity"
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/loginA"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_dialog_bg"
+            android:gravity="center"
+            android:text="登录A"
+            android:textColor="@color/black"
+            android:textSize="18sp"></TextView>
+
+        <TextView
+            android:id="@+id/loginB"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/shape_dialog_bg"
+            android:gravity="center"
+            android:text="登录B"
+            android:textColor="@color/black"
+            android:textSize="18sp"></TextView>
+
+    </LinearLayout>
+
+
+    <EditText
+        android:id="@+id/userId"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:hint="请输入用户id"
+        android:text="123646">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/tel"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:hint="请输入电话"
+        android:text="18684711211">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/headProfile"
+        android:layout_width="300dp"
+        android:layout_height="52dp"
+        android:hint="请输入分享地址"
+        android:text="https://oss.zhcs.csbtv.com/zhcs-prd/icon/WechatIMG180.png">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/nickName"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:hint="请输入昵称"
+        android:text="JSON">
+
+    </EditText>
+</LinearLayout>

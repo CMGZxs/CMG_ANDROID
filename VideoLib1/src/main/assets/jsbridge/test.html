@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>iOS and JS</title>
+    <style type="text/css">
+            body,
+            html
+            {
+                height: 500px;
+                line-height: 1;
+                font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial,
+                sans-serif, 'Droid Sans Fallback';
+                -webkit-text-size-adjust: 100% !important;
+                -webkit-tap-highlight-color: transparent;
+            }
+        #__vconsole .vc-switch
+        {
+            top:0;
+        }
+
+    </style>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+
+    <script src="./vconsole.min.js"></script>
+    <script>
+            new VConsole();
+
+    </script>
+    <script>
+    </script>
+</head>
+
+<body>
+
+<div style="margin-top: 50px" display='flex'>
+
+    <h1 style="color: black;">Webview交互调试</h1><br/>
+
+
+    <div><input type="button" value="设置标题" onclick="mjmethod1()"></div>
+    <br/>
+    <div><input type="button" value="返回" onclick="mjmethod2()"></div>
+    <br/>
+    <div><input type="button" value="设备ID" onclick="mjmethod3()"></div>
+    <br/>
+    <div><input type="button" value="分享" onclick="mjmethod4()"></div>
+    <br/>
+    <div><input type="button" value="获取用户信息" onclick="mjmethod5()"></div>
+    <br/>
+    <div><input type="button" value="保存图片" onclick="mjmethod6()"></div>
+    <br/>
+    <div><input type="button" value="打开webview" onclick="mjmethod7()"></div>
+    <br/>
+    <div><input type="button" value="打开登录页" onclick="mjmethod8()"></div>
+    <br/>
+    <div><input type="button" value="打开视频详情" onclick="mjmethod9()"></div>
+
+</div>
+<script type="text/javascript">
+        alert(window.orgInfo)
+        //固定代码，必须加在JS里
+        function setupWebViewJavascriptBridge(callback) {
+            
+                if (window.WebViewJavascriptBridge) {
+                    return callback(WebViewJavascriptBridge);
+                }
+                if (window.WVJBCallbacks) {
+                    return window.WVJBCallbacks.push(callback);
+                }
+                window.WVJBCallbacks = [callback];
+                var WVJBIframe = document.createElement('iframe');
+                WVJBIframe.style.display = 'none';
+                WVJBIframe.src = 'wvjbscheme://__BRIDGE_LOADED__';
+                document.documentElement.appendChild(WVJBIframe);
+                setTimeout(function() {
+                    document.documentElement.removeChild(WVJBIframe)
+                }, 0)
+            }
+
+           function connectWebViewJavascriptBridge(callback) {
+            if (window.WebViewJavascriptBridge) {
+                callback(WebViewJavascriptBridge)
+            } else {
+                document.addEventListener(
+                    'WebViewJavascriptBridgeReady'
+                    , function() {
+                        callback(WebViewJavascriptBridge)
+                    },
+                    false
+                );
+            }
+        }
+
+        connectWebViewJavascriptBridge(function(bridge) {
+            bridge.init(function(message, responseCallback) {
+                console.log('Js got a message', message);
+                var data = {
+                    'Javascript Responds': '测试中文!'
+                };
+                console.log('Js responding with', data);
+                responseCallback(data);
+            });
+
+            bridge.registerHandler("functionInJs", function(data, responseCallback) {
+                document.getElementById("show").innerHTML = ("data from Java: = " + data);
+                var responseData = "Javascript Says Right back aka!";
+                responseCallback(responseData);
+            });
+        })
+
+            
+        //固定代码，必须写
+        setupWebViewJavascriptBridge(function(bridge){
+            //Native call JS
+            bridge.registerHandler('JSHandler',function(params,responseCallback) {
+                alert(params);
+                
+                responseCallback('1357888');
+            })
+
+
+        });
+            
+            
+            
+            
+            
+            
+        
+        //设置标题
+        function mjmethod1()
+        {
+            var param = {methodName:'setTitle',data:{title:'湖南新闻XXX'}};
+            WebViewJavascriptBridge.callHandler('MJBrigeHandler',param)
+        }
+        
+        
+        
+        //返回
+        function mjmethod2()
+        {
+            var param = {methodName:'monitorLifeCycle',data:null};
+            WebViewJavascriptBridge.callHandler('MJBrigeHandler',param)
+        }
+        
+        
+        
+        //获取设备ID
+        function mjmethod3()
+        {
+            var param = {methodName:'getDeviceId',data:null};
+            WebViewJavascriptBridge.callHandler('MJBrigeHandler',param,function(res) {
+                        alert('deviceId = '+res);
+                    })
+            
+        }
+        
+        
+        
+        //分享
+        function mjmethod4()
+        {
+            var param = {methodName:'share',data:{platform:'2',shareUrl:'https://www.csbtv.com',shareTitle:"Tttitle",shareImage:'xxx.png',shareBrief:'briefffff'}};
+            
+            WebViewJavascriptBridge.callHandler('MJBrigeHandler',param)
+        }
+            
+            
+            
+        //获取用户信息
+        function mjmethod5()
+        {
+            var param = {methodName:'getUserInfo',data:null};
+            
+            WebViewJavascriptBridge.callHandler('MJBrigeHandler',param,function(res) {
+                        alert(res)
+                    })
+        }
+        
+        
+        
+        //保存图片
+        function mjmethod6()
+        {
+            var param = {methodName:'savePhoto',data:{url:'https://img1.baidu.com/it/u=3879630843,420155804&fm=253&fmt=auto&app=138&f=JPEG?w=550&h=370'}};
+            
+            WebViewJavascriptBridge.callHandler('MJBrigeHandler',param,function(res) {
+                        if(res==1)
+                        {
+                            alert('保存成功')
+                        }
+                        else
+                        {
+                            alert('保存失败')
+                        }
+                    })
+        }
+        
+        
+        
+        //打开新的webview
+        function mjmethod7()
+        {
+            var param = {methodName:'jumpToNativePage',data:{newsLink:'https://www.bilibili.com',title:'俄乌谈判取得重大进展',content:'3.14日俄罗斯乌克兰谈判取得重大进展xxxx',imgUrl:'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fp2.cri.cn%2FM00%2F2E%2FBB%2FrBABC2DF-g-AD4rwAAAAAAAAAAA99.1280x854.750x501.jpeg&refer=http%3A%2F%2Fp2.cri.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1649928803&t=c2f4806099c46ed3cec68e0ef6c02b3c',link:'https://baijiahao.baidu.com/s?id=1727285565249322078&wfr=spider&for=pc'}};
+            
+            WebViewJavascriptBridge.callHandler('MJBrigeHandler',param)
+        }
+        
+        
+        
+        //打开登录页
+        function mjmethod8()
+        {
+            var param = {methodName:'goLogin',data:{}};
+            
+            WebViewJavascriptBridge.callHandler('MJBrigeHandler',param)
+        }
+        
+        
+        //打开单条视频
+        function mjmethod9()
+        {
+            var param = {methodName:'openVideo',data:{contentId:'23102677'}};
+            
+            WebViewJavascriptBridge.callHandler('MJBrigeHandler',param)
+        }
+    
+    
+    
+
+        
+        //App登录后主动调用H5
+        function onAppLogin(userinfo)
+        {
+            alert(userinfo);
+        }
+
+
+            
+            
+            
+            
+
+        
+        
+
+</script>
+</body>
+</html>
+

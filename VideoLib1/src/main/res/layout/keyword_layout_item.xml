@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:gravity="center"
+    android:layout_marginLeft="15dp"
+    tool:ignore="MissingDefaultResource">
+
+    <TextView
+        android:id="@+id/keyword_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="@drawable/keyword_bg"
+        android:textColor="@color/video_white"
+        android:paddingLeft="@dimen/video_dp10"
+        android:paddingRight="@dimen/video_dp10"
+        tool:text="#守护解放西#"
+        android:layout_gravity="center">
+
+    </TextView>
+
+</LinearLayout>

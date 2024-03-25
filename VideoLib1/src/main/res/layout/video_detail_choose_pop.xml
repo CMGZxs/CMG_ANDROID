@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="50dp"
+    android:orientation="vertical"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_gravity="center"
+    android:layout_marginTop="@dimen/video_dp70"
+    android:layout_marginBottom="@dimen/video_dp70"
+    android:background="@drawable/choose_pop_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/video_dp10"
+        android:paddingTop="@dimen/video_dp10"
+        android:paddingBottom="@dimen/video_dp10">
+
+        <ImageView
+            android:id="@+id/choose_pop_dismiss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/szrm_sdk_choose_pop_dismiss">
+
+        </ImageView>
+
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/video_detail_choose_pop_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/video_dp10"
+        android:layout_marginRight="@dimen/video_dp10"
+        >
+
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>
